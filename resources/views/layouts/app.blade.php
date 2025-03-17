@@ -16,11 +16,12 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link text-light" href="">Alle auto's</a></li>
-                            @auth
-                                <li class="nav-item"><a class="nav-link text-light" href="">Mijn aanbod</a></li>
-                                <li class="nav-item"><a class="nav-link text-light" href="">Aanbod plaatsen</a></li>
-                            @endauth
-                        </li>
+                        @auth
+                            <li class="nav-item"><a class="nav-link text-light" href="{{ route('cars.my')}}">Mijn aanbod</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="{{ route('cars.create') }}">Aanbod plaatsen</a>
+                            </li>
+                        @endauth
                     </ul>
                     <ul class="navbar-nav">
                         @guest
